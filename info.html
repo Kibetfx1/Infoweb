@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧸 TEDDY-XMD 🧸</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #00f3ff;
+            --secondary: #bc13fe;
+            --bg: #000000;
+            --text-main: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            background-image: radial-gradient(circle at 50% 50%, #111 0%, #000 100%);
+        }
+
+        .container {
+            width: 95%;
+            max-width: 500px;
+            padding: 30px;
+            background: rgba(20, 20, 20, 0.95);
+            border: 3px solid var(--primary); /* Thick Border */
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+            border-radius: 20px;
+        }
+
+        /* Top Status Bar */
+        .top-status {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            padding: 15px;
+            border-bottom: 2px solid var(--primary);
+            font-family: 'Orbitron';
+            font-size: 0.9rem; /* Big font */
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .top-status span { color: var(--primary); font-size: 1.1rem; display: block; margin-top: 5px; }
+
+        /* ===== RGB BAR ANIMATION (WORKING) ===== */
+
+.rgb-bar {
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #00ff00,
+        #00ffff,
+        #ff00ff,
+        #ff0000
+    );
+    background-size: 300% 100%;
+    animation: rgbMove 2s linear infinite;
+    margin: 8px 0;
+}
+
+@keyframes rgbMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 300% 0%;
+    }
+}
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem; /* Ultra Big */
+            text-align: center;
+            color: var(--primary);
+            text-shadow: 0 0 15px var(--primary);
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .section-title {
+            font-family: 'Orbitron';
+            font-size: 1.3rem; /* Mote lafaz */
+            color: var(--secondary);
+            margin: 30px 0 15px;
+            text-transform: uppercase;
+            border-left: 6px solid var(--secondary);
+            padding-left: 15px;
+        }
+
+        /* Large Link Cards */
+        .link-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #111;
+            padding: 20px; /* Big padding */
+            margin-bottom: 15px;
+            border: 2px solid #333;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+            border-radius: 15px;
+        }
+        .link-card:hover {
+            border-color: var(--primary);
+            background: #1a1a1a;
+            transform: scale(1.03);
+        }
+        .link-card i { font-size: 1.8rem; color: var(--primary); }
+        .link-text { 
+            flex-grow: 1; 
+            margin-left: 20px; 
+            font-size: 1.4rem; /* Big font for links */
+            font-weight: 800; 
+        }
+        .link-card span { 
+            font-size: 0.9rem; 
+            background: var(--primary); 
+            color: #000; 
+            padding: 5px 12px; 
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Owner Profile */
+        .owner-section {
+            border: 2px solid var(--secondary);
+            padding: 25px;
+            text-align: center;
+            background: #0a0a0a;
+            border-radius: 20px;
+        }
+        .owner-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--secondary);
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px var(--secondary);
+        }
+        .owner-name { font-size: 1.8rem; font-weight: 900; color: #fff; }
+
+        /* GIANT PAIR BUTTON */
+        .pair-button {
+            display: block;
+            width: 100%;
+            padding: 25px;
+            margin-top: 40px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: #000;
+            text-decoration: none;
+            text-align: center;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            font-size: 1.8rem; /* Very big */
+            border-radius: 15px;
+            text-shadow: 1px 1px 0px #fff;
+        }
+
+/* ===== SERVER BUTTONS STYLE ===== */
+
+.server-section {
+    margin-top: 40px;
+}
+
+.server-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.server-btn {
+    background: linear-gradient(45deg, #00f3ff, #bc13fe);
+    border: none;
+    padding: 15px;
+    color: #000;
+    font-family: Orbitron;
+    font-weight: 900;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.server-btn:hover {
+    transform: scale(1.05);
+        }
+
+ /* ===== SERVER BOX UI ===== */
+
+.server-box {
+    background:#111;
+    padding:15px;
+    margin:20px 0;
+    border-radius:12px;
+}
+
+.rgb-bar {
+    height:4px;
+    background:linear-gradient(90deg,#ff0000,#00ff00,#00ffff,#ff00ff,#ff0000);
+    background-size:300%;
+    animation: rgbMove 2s linear infinite;
+    margin:8px 0;
+}
+.server-name {
+    font-family:Orbitron;
+    font-size:1.4rem;
+}
+
+.server-info {
+    margin-top:8px;
+    font-size:1rem;
+}
+
+.active { color:#0f0; }
+.stopped { color:#f00; }
+
+.pair-btn {
+    display:block;
+    margin-top:10px;
+    text-align:center;
+    padding:10px;
+    background:linear-gradient(45deg,#00f3ff,#bc13fe);
+    color:#000;
+    font-weight:900;
+    border-radius:8px;
+    text-decoration:none;
+}       
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-status">
+            <div>STATUS<span style="color:#0f0">ACTIVE</span></div>
+            <div>UPTIME<span id="uptime">0s</span></div>
+            <div>BATTERY<span id="bat">--%</span></div>
+        </div>
+
+        <div class="rgb-line"></div>
+
+        <div class="section-title">WHATSAPP INFO</div>
+        
+        <a href="https://wa.me/254799963583" class="link-card">
+            <i class="fab fa-whatsapp"></i>
+            <div class="link-text">OWNER</div>
+            <span>CHAT</span>
+        </a>
+
+        <a href="https://t.me/free_net_zone1" class="link-card">
+            <i class="fab fa-whatsapp"></i>
+            <div class="link-text">PROFILE</div>
+            <span>SHOW</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029Vb6NveDBPzjPa4vIRt3n" class="link-card">
+            <i class="fas fa-bullhorn"></i>
+            <div class="link-text">WA CHANNEL</div>
+            <span>JOIN</span>
+        </a>
+
+        <a href="https://chat.whatsapp.com/CLClgqJIC59GrcI4sRzLu8" class="link-card">
+            <i class="fas fa-users"></i>
+            <div class="link-text">WA GROUP</div>
+            <span>JOIN</span>
+        </a>
+
+        <div class="rgb-line"></div>
+
+                <div class="section-title">TELEGRAM INFO</div>
+        
+        <a href="https://t.me/xdbot1" class="link-card">
+            <i class="fas fa-user-shield"></i>
+            <div class="link-text">OWNER</div>
+            <span>CONTACT</span>
+        </a>
+
+        <a href="https://t.me/free_net_zone1" class="link-card">
+            <i class="fab fa-telegram-plane"></i>
+            <div class="link-text">OFFICIAL CHANNEL</div>
+            <span>JOIN</span>
+            
+        </a>
+
+        <a href="https://t.me/free_net_zone2" class="link-card">
+            <i class="fas fa-users-viewfinder"></i>
+            <div class="link-text">PUBLIC GROUP</div>
+            <span>ENTER</span>
+        </a>
+
+        <a href="https://t.me/Bilal_bugkingbot" class="link-card">
+            <i class="fas fa-robot"></i>
+            <div class="link-text">BUG BOT</div>
+            <span>TEST</span>
+        </a>
+            
+        </a>
+
+        <div class="rgb-line"></div>
+
+                <div class="section-title">DEVELOPER</div>
+        
+        <div class="owner-section" style="
+            border: 5px solid transparent; 
+            border-image: linear-gradient(90deg, #ff0000, #00ff00, #00ffff, #ff00ff, #ff0000) 1;
+            background: #0a0a0a;
+            padding: 30px;
+            border-radius: 0px; /* Heroku par linear border ke sath yahi best lagta hai */
+            animation: rgbMove 3s linear infinite;
+        ">
+            <img src="https://files.catbox.moe/13nyhx.jpg" alt="Bilal" class="owner-img" style="width: 140px; height: 140px;">
+            
+            <div class="owner-name" style="font-size: 2rem; margin-bottom: 20px;">TEDDY-XMD</div>
+
+            <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                
+                <a href="https://github.com/Teddytech1" class="link-card" style="
+                    width: 100%; 
+                    padding: 15px; 
+                    font-size: 1.3rem; 
+                    font-weight: 800; 
+                    justify-content: center;
+                    border: 3px solid transparent;
+                    border-image: linear-gradient(90deg, #00ffff, #ff00ff, #00ffff) 1;
+                    animation: rgbMove 2s linear infinite;
+                ">
+                    <i class="fab fa-github" style="margin-right: 10px;"></i> OWNER GIT
+                </a>
+
+                <a href="https://github.com/Teddytech1/TEDDY-XMD" class="link-card" style="
+                    width: 100%; 
+                    padding: 15px; 
+                    font-size: 1.3rem; 
+                    font-weight: 800; 
+                    justify-content: center;
+                    border: 3px solid transparent;
+                    border-image: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff) 1;
+                    animation: rgbMove 2s linear infinite;
+                ">
+                    <i class="fas fa-code-branch" style="margin-right: 10px;"></i> BOT
+                </a>
+
+            </div>
+        </div>
+        
+      <div id="serverArea"></div>
+
+<footer style="
+text-align:center;
+margin-top:50px;
+font-family:'Orbitron', sans-serif;
+font-size:1.2rem;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:1px;
+background:linear-gradient(90deg,#ff0000,#00ff00,#00ffff,#ff00ff,#ff0000);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:rgbMove 2s linear infinite;
+text-shadow:0 0 8px rgba(255,255,255,0.1);
+padding-bottom:30px;
+width:100%;
+word-wrap:break-word;
+">
+TEDDY-XMD SYSTEM
+</footer>
+
+        <script src="script.js"></script>
+</body>
+</html>
