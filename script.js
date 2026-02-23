@@ -257,13 +257,13 @@ const servers = [
     { name:"Server 1", url:"https://teddy-xmini3-bc380d645d97.herokuapp.com" },
     { name:"Server 2", url:"https://teddy-xmini2-6096c332490d.herokuapp.com" },
     { name:"Server 3", url:"https://teddy-xmini1-679f828aeb2a.herokuapp.com" },
-    { name:"Server 4", url:"https://teddy-xmini1-679f828aeb2a.herokuapp.com/" },
-    { name:"Server 5", url:"https://teddy-xmini2-6096c332490d.herokuapp.com/" },
-    { name:"Server 6", url:"https://teddy-xmini3-bc380d645d97.herokuapp.com/" },
-    { name:"Server 7", url:"https://teddy-xmini1-679f828aeb2a.herokuapp.com/" },
-    { name:"Server 8", url:"https://teddy-xmini2-6096c332490d.herokuapp.com/" },
-    { name:"Server 9", url:"https://teddy-xmini3-bc380d645d97.herokuapp.com/" },
-    { name:"Server 10", url:"https://teddy-xmini1-679f828aeb2a.herokuapp.com/" }
+    { name:"Server 4", url:"https://teddy-xmini1-679f828aeb2a.herokuapp.com" },
+    { name:"Server 5", url:"https://teddy-xmini2-6096c332490d.herokuapp.com" },
+    { name:"Server 6", url:"https://teddy-xmini3-bc380d645d97.herokuapp.com" },
+    { name:"Server 7", url:"https://teddy-xmini1-679f828aeb2a.herokuapp.com" },
+    { name:"Server 8", url:"https://teddy-xmini2-6096c332490d.herokuapp.com" },
+    { name:"Server 9", url:"https://teddy-xmini3-bc380d645d97.herokuapp.com" },
+    { name:"Server 10", url:"https://teddy-xmini1-679f828aeb2a.herokuapp.com" }
 ];
 
 
